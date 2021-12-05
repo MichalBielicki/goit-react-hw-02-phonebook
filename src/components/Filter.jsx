@@ -1,10 +1,16 @@
 import React from "react";
 
-function Filter() {
+function Filter({ value, onChange }) {
   return (
     <div>
-      <label for="filter">Find contacts by name</label>
-      <input id="filter" type="text" required />
+      <label for="filter">Find contacts by name </label>
+      <input
+        id="filter"
+        type="text"
+        value={value}
+        onChange={onChange}
+        required
+      />
     </div>
   );
 }

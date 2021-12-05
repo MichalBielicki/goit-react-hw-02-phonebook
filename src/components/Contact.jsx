@@ -1,12 +1,12 @@
 import React from "react";
 
-function Contact({ name, number, action }) {
+function Contact({ name, number, onDeleteContact }) {
   return (
     <>
       <li>
         {name}
         {number}
-        <button type="button" onClick={action}>
+        <button type="button" onClick={onDeleteContact}>
           Delete
         </button>
       </li>

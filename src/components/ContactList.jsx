@@ -1,10 +1,18 @@
 import React from "react";
-import Contact from "./Contact";
 
-function ContactList() {
+function ContactList({ contacts, onDeleteContact }) {
   return (
     <ul>
-      <Contact name number action />
+      {contacts.map(({ id, name, phone }) => (
+        <li key={id}>
+          <p>
+            {name}: {phone}{" "}
+            <button type="button" onClick={() => onDeleteContact(id)}>
+              Delete
+            </button>
+          </p>
+        </li>
+      ))}
     </ul>
   );
 }
